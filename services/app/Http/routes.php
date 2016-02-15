@@ -12,3 +12,4 @@
 */
 
 $app->get('/getSiteData', 'ServiceController@getSiteData');
+$app->get('/getSkillsData', 'ServiceController@getSkillsData');

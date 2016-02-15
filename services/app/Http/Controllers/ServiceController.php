@@ -6,9 +6,12 @@ use Laravel\Lumen\Routing\Controller as BaseController;
 
 class ServiceController extends BaseController
 {
+	public function __construct() {
+		header('Content-Type: application/json');
+	}
     //
     public function getSiteData() {
-    	header('Content-Type: application/json');
+    	
     	$profile = new ProfileController();
     	return json_encode(array(
     		"getSiteData" => array(
@@ -20,6 +23,13 @@ class ServiceController extends BaseController
     			),
     			"results" => $profile->getBasicInfo()
     		)
+    	));
+    }
+
+    public function getSkillsData() {
+    	$profile = new ProfileController();
+    	return json_encode(array(
+    		"results" => $profile->getSkills()
     	));
     }
 
