@@ -8,8 +8,17 @@ class ServiceController extends BaseController
 {
     //
     public function getSiteData() {
+    	header('Content-Type: application/json');
     	$profile = new ProfileController();
-    	print_r($profile->getBasicInfo());
+    	return json_encode(array(
+    		"getSiteData" => array(
+    			"status" => 0,
+    			"meta",
+    			"results" => array(
+    				"skills" => $profile->getBasicInfo()
+    			)
+    		)
+    	));
     }
 
     public function getGithubData() {
