@@ -1,0 +1,1 @@
+//var controller = angular.module('controllers', ['ngAnimate']);
