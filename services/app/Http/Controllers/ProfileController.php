@@ -12,6 +12,7 @@ class ProfileController extends BaseController
     		'birthday' => "October 23, 1992",
     		'age' => date_diff(date_create('1992-10-23'), date_create('today'))->y,
     		'birthplace' => "Tagum City, Davao",
+    		'address' => '116b mem2 g enriquez brgy vergara mandaluyong city',
     		'slogan' => 'A self taught full stack developer'
     	);
     }
@@ -25,7 +26,7 @@ class ProfileController extends BaseController
     	);
     }
 
-    
+
 
     /**
 	* @param string
